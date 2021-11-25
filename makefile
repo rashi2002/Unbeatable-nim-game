@@ -5,7 +5,7 @@ EXECS=alphanim
 all: $(EXECS)
 
 clean:
-	rm -i $($EXECS) *.o
+	rm -i $(EXECS) *.o
 
 # override the implicit compilation rules for executables so that we can
 # override them with new ones
@@ -21,8 +21,4 @@ alphanim:  alphanim.o nim.h nim.o nimhelp.o
 # create .o files by compiling the .c files
 %.o : %.c nim.h
 	$(CC) -c $(CFLAGS) $< -o $@
-
-
-
-
 
