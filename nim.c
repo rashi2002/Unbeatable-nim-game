@@ -109,12 +109,12 @@ void join_graph( struct node *nim_hash, int hash, int board_size, int *start_boa
 				//debugging statement
 
 				join_graph(nim_hash, nim_hash[hash].move[k].hash ,board_size, start_board);
-				nim_hash[hash].nimsum = compute_nimsum(board_size,nim_hash[hash].board);	
-
 				
 			}
 		}
 		//setting nimsum
+		nim_hash[hash].nimsum = compute_nimsum(board_size,nim_hash[hash].board);	
+
 	}
  }
 /*************************************function9*************************************/
